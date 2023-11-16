@@ -1,16 +1,10 @@
 #include <iostream>
 #include <sstream>
-#include <cmath>
 
 namespace Geometria {
-    double calcularArea () {
-        double radio;
-        std::string line;
-        
-        std::cout << "Ingrese el número del radio: ";
-        std::getline(std::cin, line);
-        std::stringstream(line) >> radio;
+    const double PI = 3.141592653589793;
 
-        return M_PI * pow(radio, 2);
+    double calcularAreaCirculo(double radio) {
+        return PI * radio * radio;
     }
 }

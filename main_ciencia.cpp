@@ -1,27 +1,21 @@
 #include <iostream>
+#include <sstream>
 #include <string>
-#include "triangulo.cpp"  // Incluir el código de triangulo.cpp
-#include "circulo.cpp"    // Incluir el código de circulo.cpp
+#include "triangulo.cpp"
+#include "circulo.cpp"
 
 int main() {
-    double base, altura, radio;
-
-    // Solicitar al usuario que ingrese los datos para el triángulo
+    double baseTriangulo, alturaTriangulo, radioCirculo;
     std::cout << "Ingresa la base del triángulo: ";
-    std::cin >> base;
+    std::cin >> baseTriangulo;
+
     std::cout << "Ingresa la altura del triángulo: ";
-    std::cin >> altura;
-
-    // Utilizar la función del espacio de nombres Geometria::Triangulo
-    double areaTriangulo = Geometria::Triangulo::calcularArea(base, altura);
-    std::cout << "El área del triángulo es: " << areaTriangulo << std::endl;
-
-    // Solicitar al usuario que ingrese los datos para el círculo
+    std::cin >> alturaTriangulo;
+    double areaTriangulo = Geometria::calcularAreaTriangulo(baseTriangulo, alturaTriangulo);
     std::cout << "Ingresa el radio del círculo: ";
-    std::cin >> radio;
-
-    // Utilizar la función del espacio de nombres Geometria::Circulo
-    double areaCirculo = Geometria::Circulo::calcularArea(radio);
+    std::cin >> radioCirculo;
+    double areaCirculo = Geometria::calcularAreaCirculo(radioCirculo);
+    std::cout << "El área del triángulo es: " << areaTriangulo << std::endl;
     std::cout << "El área del círculo es: " << areaCirculo << std::endl;
 
     return 0;
