@@ -1,0 +1,3 @@
+namespace Geometria {
+    double calculaArea ();
+}
