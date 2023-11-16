@@ -1,21 +1,21 @@
 #include <iostream>
-#include <string>
-#include <sstream>
-#include "triangulo.h"
-#include "circulo.h"
+#include <iomanip>
+
+namespace Ciencia {
+    namespace Fisica {
+        const double velocidadDeLaLuz = 299792458.0;
+        double calcularEnergia(double masa) {
+            return masa * velocidadDeLaLuz * velocidadDeLaLuz;
+        }
+    }
+}
 
 int main() {
-    int num;
-    std::string text, line;
+    double masa;
+    std::cout << "Ingresa la masa (en kg): ";
+    std::cin >> masa;
+    double energia = Ciencia::Fisica::calcularEnergia(masa);
+    std::cout << "La energía correspondiente es: " << std::fixed << std::setprecision(2) << energia << " Joules" << std::endl;
 
-    std::cout << "Ingresa un número: ";
-    std::getline(std::cin, line);
-    std::stringstream(line) >> num;
-
-    std::cout << "Ingresa un texto: ";
-    std::getline(std::cin, text);
-
-    std::cout << "El número ingresado es: " << num << "\nEl texto ingresado es: " << text << std::endl;
-    
     return 0;
 }
