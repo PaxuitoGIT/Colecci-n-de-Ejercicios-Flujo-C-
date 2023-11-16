@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "triangulo.h"
+#include "circulo.h"
 
 int main() {
     int num;
